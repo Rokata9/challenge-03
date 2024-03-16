@@ -1,0 +1,249 @@
+:root {
+  --ff-base: 'Baloo 2', serif;
+  --ff-accent: 'Inter', sans-serif;
+
+  --fs-200: 0.813rem;
+  --fs-300: 1.063rem;
+  --fs-500: 1.5rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.125rem;
+  --fs-900: 4.25rem;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #030303;
+  --clr-primary-400: #FF3369;
+}
+
+@media (min-width: 80em) {
+  :root {
+    --fs-600: 1.75rem;
+  }
+}
+
+/* Resets */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1, 
+h2,
+h3,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* General styling */
+
+body {
+  line-height: 1.6;
+  font-family: var(--ff-accent);
+  font-size: var(--fs-300);
+  font-weight: 400;
+  color: var(--clr-neutral-900);
+  background-color: rgb(223, 221, 213);
+}
+
+section {
+  padding: 2.5rem 0;
+}
+
+/* Typography */
+
+.page-title,
+h2 {
+  font-family: var(--ff-base);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.page-title {
+  font-size: var(--fs-900);
+}
+
+.subheading {
+  font-size: var(--fs-600);
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 2.5rem;
+  color: var(--clr-primary-400);
+}
+
+/* Utility classes */
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.split {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 80em) {
+  .split {
+    flex-direction: row;
+  }
+}
+
+.space-xl {
+  margin-top: 5rem;
+}
+
+/* Header */
+.primary-header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-nav {
+  font-family: var(--ff-base);
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+  padding: 1rem 0.5rem;
+}
+
+.primary-nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.logo {
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 80em) {
+  .primary-header,
+  .primary-nav {
+    position: static; 
+  }
+
+  .primary-header {
+    padding: 1em 5em;
+    background-color: var(--clr-neutral-100);
+  }
+
+  .primary-header a {
+    display: flex;
+  }
+
+  .primary-nav {
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-100);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    padding: 0;
+  }
+}
+
+/* Hero and intro */
+.hero {
+  color: var(--clr-neutral-100);
+  background-image: url(img/hero.jpg);
+  background-size: cover;
+  background-position: right center;
+  padding-block: 10em;
+}
+
+.intro {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  padding-bottom: 5em;
+}
+
+/* Recipe and ingredients */
+
+.recipe {
+  background-color: var(--clr-neutral-100);
+}
+
+.recipe ul,
+.recipe ol {
+  padding-left: 1em;
+}
+
+.burger-steps div:first-child {
+  padding-top: 2em;
+}
+
+.ingredients ul {
+  list-style: disc;
+}
+
+.ingredients {
+  padding-bottom: 2.5em;
+  border-bottom: 1px solid #EEF1F6;
+}
+
+@media (min-width: 40em) {
+  .recipe {
+    margin: -3rem 5rem 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .burger-steps {
+    flex-basis: 66.66666%;
+    padding-right: 2em;
+  }
+
+  .ingredients {
+    flex-basis: 33.33333%;
+    border-bottom: none;
+  }
+
+  .burger-steps div:first-child {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 80em) {
+  .ingredients {
+    padding-left: 2em;
+    border-left: 1px solid #EEF1F6;
+  }
+}
+
+/* Footer */
+
+.primary-footer {
+  color: var(--clr-neutral-100);
+  word-break: break-word;
+  padding-top: 2.5em;
+  padding-bottom: 5em;
+  background-color: var(--clr-primary-400);
+}
+
+@media (min-width: 80em) {
+  .primary-footer {
+    padding-bottom: 2.5em;
+  }
+}
