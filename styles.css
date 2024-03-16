@@ -102,8 +102,8 @@ h2 {
   }
 }
 
-.space-xl {
-  margin-top: 5rem;
+.flow-content > * + * {
+  margin-top: var(--flow-spacer, 5rem);
 }
 
 /* Header */
@@ -150,7 +150,7 @@ h2 {
   }
 
   .primary-header a {
-    display: flex;
+    display: flex; /* TODO: otherwise moves a little bit to the top? */
   }
 
   .primary-nav {
@@ -188,7 +188,8 @@ h2 {
 
 .recipe ul,
 .recipe ol {
-  padding-left: 1em;
+  /* in order to be aligned with the headers above them, still not perfectly aligned (e.g. numbers are a bit to the left) */
+  padding-left: 1em; 
 }
 
 .burger-steps div:first-child {
